@@ -1,31 +1,71 @@
-html, body {
-  background-color: hsl(212, 46%, 89%);
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
+
+:root {
+  --white: hsl(0, 0%, 100%);
+  --slate-300: hsl(212, 45%, 89%);
+  --slate-500: hsl(216, 15%, 48%);
+  --slate-900: hsl(218, 44%, 22%);
+  --pastel-blue: hsl(212, 46%, 89%);
+
+  --background-color: var(--pastel-blue);
+}
+
+h1 {
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.4rem;
+}
+
+p {
+  font-size: 0.9375rem;
+  font-weight: 400;
+  font-style: normal;
+  line-height: 1.4rem;
+}
+
+html,
+body {
+  background-color: var(--background-color);
+  font-family: "Outfit", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+.content {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
-h1 {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 900;
-  font-style: normal;
+  padding: 25px;
 }
 
 .card {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border-radius: 2rem;
-  width: 375px;
+  max-width: 325px;
   padding: 1rem;
-  box-shadow: 0 4px 30px hsl(212, 57%, 89%);
-  
+  box-shadow: 0 4px 40px hsl(212, 30%, 85%);
+  text-align: center;
+
   .qr-code {
     .qr-code__image {
       width: 100%;
       height: auto;
       border-radius: 1.2rem;
+    }
+  }
+
+  .text-content {
+    padding-left: 10%;
+    padding-right: 10%;
+
+    h1 {
+      font-size: clamp(1rem, 5.5vw, 1.4rem);
+    }
+
+    p {
+      color: var(--slate-500);
+      font-size: clamp(0.75rem, 5.5vw, 0.9375rem);
     }
   }
 }
